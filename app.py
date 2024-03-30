@@ -16,6 +16,10 @@ def index():
 def aboutUs():
     return render_template("aboutUs.html")
 
+@app.route("/signin")
+def signin():
+    return render_template("signin.html")
+
 @app.route("/order")
 def order   ():
     return render_template("order.html")
