@@ -41,13 +41,13 @@
                 <a class="nav-link active" aria-current="page" href="#">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Products</a>
+                <a href="{{ url_for('products') }}" class="nav-link" href="#">Products</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link">Work with Us!</a>
+                <a href=" {{ url_for('workwithus') }}" class="nav-link">Work with Us!</a>
               </li>
             </ul>
-            <a href="/signin" class="d-flex m-3">Iniciar Sesion</a>
+            <a href="{{ url_for('iniciarSesion') }}" class="d-flex m-3">Iniciar Sesion</a>
           </div>
         </div>
       </nav>

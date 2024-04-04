@@ -1,15 +1,75 @@
 {% extends "layout.html" %} {% block main %}
 
-<video class="video-index" width="100%" src="/static/video/Coffee_Smokey_BRoll.mp4" autoplay loop>
+<video
+  class="video-index"
+  width="100%"
+  src="/static/video/Coffee_Smokey_BRoll.mp4"
+  autoplay
+  loop
+>
   Tu navegador no admite el elemento <code>video</code>.
 </video>
 
 <div class="separator">Conoce mas de nuestros productos</div>
 
-<div class="conteiner d-flex">
-  <aside></aside>
-  <aside></aside>
-  <aside></aside>
+<div class="container">
+  <div class="jumbotron text-center">
+    <h1 class="subtitle">Bienvenido a nuestra Cafetería Especializada</h1>
+    <p class="lead">Descubre el mejor café en nuestra acogedora cafetería.</p>
+  </div>
+
+  <div class="row">
+    <div class="col-md-4">
+      <div class="card coffee-card" style="background-image: url('/static/img/coffee-table.jpg');">
+        <div class="card-body">
+          <h5 class="card-title">Para pedir</h5>
+          <p class="card-text">
+            Disfruta de nuestro café especial recién tostado y molido.
+          </p>
+          <a href="#" class="btn btn-light">Ver Más</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card coffee-card" style="background-image: url('/static/img/beans-bottle.jpg');">
+        <div class="card-body">
+          <h5 class="card-title">Nuestros productos</h5>
+          <p class="card-text">
+            Prueba nuestro delicioso café latte con un toque de vainilla.
+          </p>
+          <a href="#" class="btn btn-light">Ver Más</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card coffee-card" style="background-image: url('/static/img/people-us.jpg');">
+        <div class="card-body">
+          <h5 class="card-title">Nosotros</h5>
+          <p class="card-text">
+            Déjate seducir por nuestro cappuccino cremoso y suave.
+          </p>
+          <a href="#" class="btn btn-light">Ver Más</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr />
+
+  <div class="row">
+    <div class="col-md-6">
+      <h2>Conoce Nuestra Cafetería</h2>
+      <p>
+        En nuestra cafetería, nos esforzamos por ofrecer la mejor experiencia de
+        café a nuestros clientes. Ven y disfruta de una taza de café recién
+        hecho mientras te relajas en nuestro acogedor ambiente.
+      </p>
+      <a class="btn btn-primary" href="#" role="button">Más Información</a>
+    </div>
+    <div class="col-md-6">
+      <img src="cafeteria.jpg" class="img-fluid" alt="Cafetería" />
+    </div>
+  </div>
 </div>
 
 {% endblock %}
