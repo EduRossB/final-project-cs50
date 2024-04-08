@@ -1,16 +1,20 @@
 {% extends "layout.html" %} {% block main %}
 
-<video
-  class="video-index"
-  width="100%"
-  src="/static/video/Coffee_Smokey_BRoll.mp4"
-  autoplay
-  loop
->
-  Tu navegador no admite el elemento <code>video</code>.
-</video>
+<div id="containerVideo">
+  <video
+    id="videoIndex"
+    class="videoIndex"
+    width="100%"
+    src="/static/video/Coffee_Smokey_BRoll.mp4"
+    autoplay
+    muted="muted"
+    loop
+  >
+    Tu navegador no admite el elemento <code>video</code>.
+  </video>
+</div>
 
-<div class="separator">Conoce mas de nuestros productos</div>
+<div class="separator">Despierta tus sentidos con nuestro café</div>
 
 <div class="container">
   <div class="jumbotron text-center">
@@ -20,7 +24,10 @@
 
   <div class="row">
     <div class="col-md-4">
-      <div class="card coffee-card" style="background-image: url('/static/img/coffee-table.jpg');">
+      <div
+        class="card coffee-card"
+        style="background-image: url('/static/img/coffee-table.jpg')"
+      >
         <div class="card-body">
           <h5 class="card-title">Para pedir</h5>
           <p class="card-text">
@@ -31,7 +38,10 @@
       </div>
     </div>
     <div class="col-md-4">
-      <div class="card coffee-card" style="background-image: url('/static/img/beans-bottle.jpg');">
+      <div
+        class="card coffee-card"
+        style="background-image: url('/static/img/beans-bottle.jpg')"
+      >
         <div class="card-body">
           <h5 class="card-title">Nuestros productos</h5>
           <p class="card-text">
@@ -42,7 +52,10 @@
       </div>
     </div>
     <div class="col-md-4">
-      <div class="card coffee-card" style="background-image: url('/static/img/people-us.jpg');">
+      <div
+        class="card coffee-card"
+        style="background-image: url('/static/img/people-us.jpg')"
+      >
         <div class="card-body">
           <h5 class="card-title">Nosotros</h5>
           <p class="card-text">
@@ -56,8 +69,8 @@
 
   <hr />
 
-  <div class="row">
-    <div class="col-md-6">
+  <div class="row text-center">
+    <div class="col-md-6 my-3">
       <h2>Conoce Nuestra Cafetería</h2>
       <p>
         En nuestra cafetería, nos esforzamos por ofrecer la mejor experiencia de
@@ -66,10 +79,29 @@
       </p>
       <a class="btn btn-primary" href="#" role="button">Más Información</a>
     </div>
-    <div class="col-md-6">
-      <img src="cafeteria.jpg" class="img-fluid" alt="Cafetería" />
+    <div class="col-md-6 my-3">
+      <img
+        src="/static/img/coffee-cups.png"
+        class="img-fluid"
+        alt="Cafetería"
+      />
     </div>
   </div>
 </div>
+;
+<script>
+  function setVideoHeight() {
+    var navbarHeight = document.getElementById("navbar").offsetHeight;
+    console.log(navbarHeight);
+    var documentHeight = document.documentElement.clientHeight;
+    console.log(documentHeight);
+    var videoHeight = documentHeight - navbarHeight;
 
+    document.getElementById("containerVideo").style.height = videoHeight + "px";
+  }
+
+  document.addEventListener("DOMContentLoaded", setVideoHeight);
+
+  window.addEventListener("resize", setVideoHeight);
+</script>
 {% endblock %}
