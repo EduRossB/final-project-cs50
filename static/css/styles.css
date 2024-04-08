@@ -145,6 +145,22 @@ main {
   height: 25vh;
 }
 
+.contenedorLogin {
+  display: flex;
+  justify-content: center;
+  height: 50vh;
+
+}
+
+.contenedorLogin form {
+  display: flex;
+  flex-direction: column; 
+}
+
+.contenedorLogin *{
+  margin: 5px 0px;
+}
+
 footer {
   height: 20vh;
   background-color: rgb(0, 0, 0);

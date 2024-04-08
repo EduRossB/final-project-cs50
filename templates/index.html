@@ -18,7 +18,7 @@
 
 <div class="container">
   <div class="jumbotron text-center">
-    <h1 class="subtitle">Bienvenido a nuestra Cafetería Especializada</h1>
+    <h1 class="subtitle">Bienvenido a nuestra cafetería de especializada</h1>
     <p class="lead">Descubre el mejor café en nuestra acogedora cafetería.</p>
   </div>
 
@@ -33,7 +33,7 @@
           <p class="card-text">
             Disfruta de nuestro café especial recién tostado y molido.
           </p>
-          <a href="#" class="btn btn-light">Ver Más</a>
+          <a href="{{ url_for('order') }}" class="btn btn-light">Ver Más</a>
         </div>
       </div>
     </div>
@@ -47,7 +47,7 @@
           <p class="card-text">
             Prueba nuestro delicioso café latte con un toque de vainilla.
           </p>
-          <a href="#" class="btn btn-light">Ver Más</a>
+          <a href="{{ url_for('products') }}" class="btn btn-light">Ver Más</a>
         </div>
       </div>
     </div>
@@ -61,7 +61,7 @@
           <p class="card-text">
             Déjate seducir por nuestro cappuccino cremoso y suave.
           </p>
-          <a href="#" class="btn btn-light">Ver Más</a>
+          <a href="{{ url_for('aboutUs') }}" class="btn btn-light">Ver Más</a>
         </div>
       </div>
     </div>
@@ -71,13 +71,15 @@
 
   <div class="row text-center">
     <div class="col-md-6 my-3">
-      <h2>Conoce Nuestra Cafetería</h2>
+      <h2>Te gustaron nuestros productos?</h2>
       <p>
-        En nuestra cafetería, nos esforzamos por ofrecer la mejor experiencia de
-        café a nuestros clientes. Ven y disfruta de una taza de café recién
-        hecho mientras te relajas en nuestro acogedor ambiente.
+        Explora nuestra amplia selección de productos de alta calidad y
+        encuentra todo lo que necesitas para satisfacer tus gustos y
+        necesidades. Desde deliciosos granos de café recién tostados hasta
+        accesorios para preparar café en casa, tenemos todo lo que necesitas
+        para disfrutar de la experiencia perfecta de café.
       </p>
-      <a class="btn btn-primary" href="#" role="button">Más Información</a>
+      <a class="btn btn-primary" href="{{ url_for('contact') }}">Contacta con nosotros</a>
     </div>
     <div class="col-md-6 my-3">
       <img
