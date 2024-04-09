@@ -26,9 +26,14 @@ def index():
 def aboutUs():
     return render_template("aboutUs.html")
 
-@app.route("/login")
+@app.route("/login", methods=["POST"])
 def login():
-    return render_template("login.html")
+    if request.method == "POST":
+        email = request.form["email"]
+        password = request.form["password"]
+        print(email, password)
+    else:
+        return render_template("index.html")
 
 @app.route("/order")
 @login_required
