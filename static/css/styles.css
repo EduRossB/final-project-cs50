@@ -5,14 +5,35 @@ body {
   position: relative;
 }
 
-.navbar{
-  height: 15vh;
+.navbar {
+  height: 20vh;
+}
+
+@media (max-width: 991px) {
+  .navbar {
+    flex-direction: column;
+  }
+  .navbar div {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+  }
+  .navbar-toggler {
+    width: 10%;
+  }
 }
 
 .navbar-brand {
-  font-family: "Josefin Sans", sans-serif;
-  font-weight: bold;
-  text-decoration: underline;
+  width: 7rem;
+  background-color: antiquewhite;
+  border-radius: 30%;
+  box-shadow: inset 4px 4px 4px rgba(0, 0, 0, 0.5);
+  transition: 400ms;
+}
+
+.navbar-brand:hover {
+  transform: scale(1.1);
+  transition: 400ms;
 }
 
 .nav-item {
@@ -20,25 +41,23 @@ body {
   font-family: "Josefin Sans", sans-serif;
 }
 
-.linkIniciarSesion{
+.linkIniciarSesion {
   text-decoration: none;
   color: white;
   font-weight: bold;
 }
 
-
 main {
   padding-bottom: 20vh;
 }
 
-.conteinerProductos{
+.conteinerProductos {
   display: flex;
   align-items: center;
   flex-direction: column;
-  
 }
 
-#containerVideo{
+#containerVideo {
   display: block;
   width: 100%;
   background-color: #212529;
@@ -52,7 +71,7 @@ main {
   object-fit: cover;
 }
 
-.title{
+.title {
   width: 100%;
   text-align: center;
   font-family: "Josefin Sans", sans-serif;
@@ -76,7 +95,6 @@ main {
   height: 50vh;
   border-radius: 15px;
   margin-bottom: 35px;
-  
 }
 
 .card-body {
@@ -92,35 +110,34 @@ main {
   transition: 400ms;
 }
 
-
-.card-title{
-    font-weight: bold;
-    font-size: 35px;
-    background-color: rgba(255, 255, 255, 0.6);
-    width: 100%;
-    margin: 15px 0px;
+.card-title {
+  font-weight: bold;
+  font-size: 35px;
+  background-color: rgba(255, 255, 255, 0.6);
+  width: 100%;
+  margin: 15px 0px;
 }
 
-.card-text{
-    font-size: 25px;
-    background-color: rgba(255, 255, 255);
-    border-radius: 20px;
-    margin: 15px;
+.card-text {
+  font-size: 25px;
+  background-color: rgba(255, 255, 255);
+  border-radius: 20px;
+  margin: 15px;
 }
 
-.card-body:hover{
-    background-color: rgba(255, 255, 255, 0.6);
-    transform: scale(1.01);
-    transition: 400ms;
+.card-body:hover {
+  background-color: rgba(255, 255, 255, 0.6);
+  transform: scale(1.01);
+  transition: 400ms;
 }
 
-.card-body a{
-    transition: 400ms;
+.card-body a {
+  transition: 400ms;
 }
 
-.card-body a:hover{
-    transform: scale(1.1);
-    transition: 400ms;
+.card-body a:hover {
+  transform: scale(1.1);
+  transition: 400ms;
 }
 
 .separator {
@@ -135,12 +152,29 @@ main {
   padding: 10px;
 }
 
-.containerProductos{
+.containerProductos {
   display: flex;
   justify-content: center;
 }
 
-.imagenCardProductos{
+.cardProducto {
+  filter: grayscale(50%);
+  transition: 400ms;
+}
+
+.cardProducto:hover {
+  filter: grayscale(0);
+  transform: scale(1.1);
+  transition: 400ms;
+}
+
+.subtituloProductos {
+  text-align: left;
+  width: 80%;
+  font-size: x-large;
+}
+
+.imagenCardProductos {
   width: 25vw;
   height: 25vh;
   object-fit: cover;
@@ -150,15 +184,14 @@ main {
   display: flex;
   justify-content: center;
   height: 50vh;
-
 }
 
 .contenedorLogin form {
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
 }
 
-.contenedorLogin *{
+.contenedorLogin * {
   margin: 5px 0px;
 }
 
