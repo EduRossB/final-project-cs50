@@ -26,14 +26,18 @@ def index():
 def aboutUs():
     return render_template("aboutUs.html")
 
-@app.route("/login", methods=["POST"])
+@app.route("/login", methods=["GET", "POST"])
 def login():
     if request.method == "POST":
         email = request.form["email"]
         password = request.form["password"]
-        print(email, password)
-    else:
-        return render_template("index.html")
+        if email == "usuario@example.com" and password == "contraseña":
+            return redirect(url_for("index"))  
+        else:
+            return render_template("login_failed.html")
+        
+    elif request.method == "GET":
+        return render_template("login.html")
 
 @app.route("/order")
 @login_required

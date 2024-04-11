@@ -143,6 +143,7 @@ main {
 .imagenCardProductos{
   width: 25vw;
   height: 25vh;
+  object-fit: cover;
 }
 
 .contenedorLogin {
