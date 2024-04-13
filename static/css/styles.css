@@ -63,6 +63,9 @@ body {
 
 main {
   padding-bottom: 20vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .conteinerProductos {
@@ -98,7 +101,6 @@ main {
   width: 100%;
   height: 100vh;
   object-fit: cover;
-  filter: opacity(60%);
 }
 
 .title {
@@ -224,6 +226,29 @@ main {
 .contenedorLogin * {
   margin: 5px 0px;
 }
+
+.containerTrabaja{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 25px 0;
+  text-align: center;
+
+}
+
+.containerTrabaja aside{
+  display: flex;
+}
+
+.cardTrabaja{
+  border: solid 3px black;
+  border-radius: 5%;
+  height: 30vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 
 footer {
   height: 20vh;

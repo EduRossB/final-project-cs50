@@ -1,0 +1,13 @@
+__pycache__/
+.venv/
+
+.vscode/
+
+flask_session/
+
+database.db
+
+node_modules/
+package-lock.json
+
+requirements.txt
