@@ -42,12 +42,11 @@ body {
   transition: 400ms;
 }
 
-.nav-item:hover{
+.nav-item:hover {
   transform: scale(1.1);
   transition: 400ms;
   text-decoration: underline;
 }
-
 
 .linkIniciarSesion {
   text-decoration: none;
@@ -55,7 +54,7 @@ body {
   font-weight: bold;
   transition: 400ms;
 }
-.linkIniciarSesion:hover{
+.linkIniciarSesion:hover {
   transform: scale(1.07);
   transition: 400ms;
   text-decoration: underline;
@@ -81,7 +80,7 @@ main {
   overflow: hidden;
 }
 
-#containerVideo article{
+#containerVideo article {
   z-index: 5;
   color: rgba(255, 255, 255);
   position: absolute;
@@ -91,10 +90,9 @@ main {
   font-family: "Josefin Sans", sans-serif;
 }
 
-#containerVideo article a{
-  background-color: rgba(255, 255, 255, 0.592)
+#containerVideo article a {
+  background-color: rgba(255, 255, 255, 0.592);
 }
-
 
 .videoIndex {
   display: block;
@@ -227,28 +225,65 @@ main {
   margin: 5px 0px;
 }
 
-.containerTrabaja{
+.containerTrabaja {
   display: flex;
   justify-content: center;
   flex-direction: column;
   margin: 25px 0;
   text-align: center;
-
 }
 
-.containerTrabaja aside{
+.containerTrabaja aside {
   display: flex;
 }
 
-.cardTrabaja{
+.cardTrabaja {
   border: solid 3px black;
-  border-radius: 5%;
+  border-radius: 100%;
   height: 30vh;
+  color: rgb(91, 58, 29);
   display: flex;
   flex-direction: column;
   justify-content: center;
+  background: -moz-linear-gradient(
+    -45deg,
+    wheat 0%,
+    rgb(255, 208, 121) 25%,
+    rgb(253, 239, 212) 50%,
+    rgb(255, 208, 121) 75%,
+    rgb(241, 211, 156) 100%
+  );
+  background: -webkit-linear-gradient(
+    -45deg,
+    wheat 0%,
+    rgb(255, 208, 121) 25%,
+    rgb(253, 239, 212) 50%,
+    rgb(255, 208, 121) 75%,
+    rgb(241, 211, 156) 100%
+  );
+  background: linear-gradient(
+    135deg,
+    wheat 0%,
+    rgb(255, 208, 121) 25%,
+    rgb(253, 239, 212) 50%,
+    rgb(255, 208, 121) 75%,
+    rgb(241, 211, 156) 100%
+  );
+  background-size: 400% 400%;
+  background-repeat: no-repeat;
+  max-height: 100vh;
+  align-items: center;
+  cursor: default;
+  transition: 2s all;
+
+  /* Agregando sombra externa */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5),
+    inset 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
+.cardTrabaja:hover {
+  background-position: 100% 100%;
+}
 
 footer {
   height: 20vh;
